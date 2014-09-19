@@ -51,6 +51,17 @@ h1 {
 	height:3em;
 	margin: .2em;
 }
+#date {
+	font-size: .8em;
+}
+
+#temp {
+	font-size: .7em;
+}
+
+#time {
+	font-size: .7em;
+}
 
 .wrapper {
 	color: white;

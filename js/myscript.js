@@ -41,8 +41,10 @@ var Locations = {
 			$('#weatherCast').append(weatherCondition);
 			var currentDate = '<div id="date">' + response1.data.weather[0].date + '</div>';
 			$('#weatherCast').append(currentDate);
-			var tempDegree = '<div id="temp">' + weather.temp_C + '&deg C' + '</div>';
+			var tempDegree = '<div id="temp">' + 'MaxTemp: ' + weather.temp_C + '&deg C' + '</div>';
 			$('#weatherCast').append(tempDegree);
+			var timeObserved = '<div id="time">' + 'Observed: ' + weather.observation_time  + '</div>';
+			$('#weatherCast').append(timeObserved);
 	},
 
 	
@@ -92,7 +94,8 @@ var Locations = {
 
 	showThisLocationOnMap: function(event){
 		event.preventDefault();
-		$(this).parent().show();
+		$(this).hide();
+		$(this).prev('.smaller').show();
 	},
 
 
@@ -101,7 +104,7 @@ var Locations = {
 		$('#homePage').hide();
 		$('#nearByShops').on('click', Locations.switchTabsToNextPage);
 		$('#homePage').on('click', Locations.switchTabsToHomePage);
-		$('.container').on('click', '#showOnMap', Locations.showThisLocationOnMap);
+		$('.container').on('click', 'input[type=button]', Locations.showThisLocationOnMap);
 	
 	
 	}
