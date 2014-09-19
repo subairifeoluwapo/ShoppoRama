@@ -22,7 +22,7 @@ var Locations = {
 	        	});
 	  
 	        	var center =  position.coords.latitude + ',' + position.coords.longitude;
-	        	var map = '<iframe width="90%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDzBjNNTZDL-eYH_Nbth3IMZTcGN3PR7aw&zoom=3&center=' + center + '&maptype=satellite"></iframe>';
+	        	var map = '<iframe width="90%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDzBjNNTZDL-eYH_Nbth3IMZTcGN3PR7aw&zoom=3&q=Lagos+Nigeria&maptype=satellite"></iframe>';
 				$('#Map').append(map);    	
 			});
 		} else {
@@ -60,7 +60,7 @@ var Locations = {
 				var tipped = '<div id="tips">' + 'Popular tip: ' + post.tips[0].text + '.. Votes: ' + post.tips[0].likes.summary + '.' + '</div>';
 				$('.container').append(tipped);
 				var addressOfShop = '<div id="address">' + post.venue.location.formattedAddress + '</div>'
-										+ '<iframe class="smaller" width="70%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDzBjNNTZDL-eYH_Nbth3IMZTcGN3PR7aw&zoom=16&center=' + post.venue.location.lat + ',' + post.venue.location.lng + '&maptype=roadmap"></iframe>';
+										+ '<iframe class="smaller" width="70%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDzBjNNTZDL-eYH_Nbth3IMZTcGN3PR7aw&zoom=15&q=' + post.venue.location.address +'+'+ post.venue.location.city + '&maptype=roadmap"></iframe>';
 				$('.container').append(addressOfShop);
 				$('.smaller').hide();
 				var showOnMapButton = '<input type="button" value="Show on Map" id="showOnMap"/>';
@@ -82,6 +82,8 @@ var Locations = {
 		$('#Map').hide();
 		$('#nearByShops').hide();
 		$('#homePage').show();
+		$('.intro').hide();
+		$('.intro2').show();
 	},
 
 	switchTabsToHomePage: function(event){
@@ -90,6 +92,9 @@ var Locations = {
 		$('#Map').show();
 		$('#nearByShops').show();
 		$('#homePage').hide();
+		$('#showOnMap').show();
+		$('.smaller').hide();
+		$('.intro').show();
 	},
 
 	showThisLocationOnMap: function(event){
@@ -101,6 +106,7 @@ var Locations = {
 
 	initialize: function() {
 		Locations.fetchLocations();
+		$('.intro2').hide();
 		$('#homePage').hide();
 		$('#nearByShops').on('click', Locations.switchTabsToNextPage);
 		$('#homePage').on('click', Locations.switchTabsToHomePage);
