@@ -42,7 +42,7 @@ h1 {
 	font-family: 'Orbitron', sans-serif;
 	opacity: .7;
 	position: fixed;
-	margin-top: 6em;
+	margin-top: 3em;
 	margin-left: 9em;
 }
 
@@ -70,6 +70,22 @@ h1 {
 #nearByShops:hover {
 	color: black;
 }
+
+#homePage {
+	font-family: 'Righteous', cursive;
+	border: none;
+	padding: .5em .2em;
+	margin-left: 37.5em;
+	margin-top: 1em;
+	background-image: url('../img/image5.jpg');
+	background-size: contain;
+	color: white;
+}
+
+#homePage:hover {
+	color: black;
+}
+
 
 #Map {
 	margin-left: 7em;
@@ -122,6 +138,7 @@ h1 {
 #address {
 	font-family: 'Lobster Two', cursive;
 	font-size: 1em;
+	color: black;
 }
 
 footer {

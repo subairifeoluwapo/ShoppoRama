@@ -60,6 +60,7 @@ var Locations = {
 				var addressOfShop = '<div id="address">' + post.venue.location.formattedAddress + '</div>'
 										+ '<iframe class="smaller" width="70%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDzBjNNTZDL-eYH_Nbth3IMZTcGN3PR7aw&zoom=16&center=' + post.venue.location.lat + ',' + post.venue.location.lng + '&maptype=roadmap"></iframe>';
 				$('.container').append(addressOfShop);
+				$('.smaller').hide();
 				var showOnMapButton = '<input type="button" value="Show on Map" id="showOnMap"/>';
 				$('.container').append(showOnMapButton);
 				var divideLine = '<div class="line"></div>';
@@ -72,24 +73,37 @@ var Locations = {
 		
 	},
 
-	// displayLocationOnMap: function(response2) {
 	
-	// },
+	switchTabsToNextPage: function(event){
+		event.preventDefault();
+		$('.container').show();
+		$('#Map').hide();
+		$('#nearByShops').hide();
+		$('#homePage').show();
+	},
 
+	switchTabsToHomePage: function(event){
+		event.preventDefault();
+		$('.container').hide();
+		$('#Map').show();
+		$('#nearByShops').show();
+		$('#homePage').hide();
+	},
+
+	showThisLocationOnMap: function(event){
+		event.preventDefault();
+		$(this).parent().show();
+	},
 
 
 	initialize: function() {
 		Locations.fetchLocations();
-		$('#nearByShops').click(function(){
-			$('.container').show();
-			$('#Map').hide();
-		});
-		// $('.smaller').hide();
-		$('#showOnMap').click(function(){
-			$('#smaller').show();
-		});
-		// Locations.fetchLocationOnMap();
-		// $('#showMap').click(Locations.displayLocationOnMap());
+		$('#homePage').hide();
+		$('#nearByShops').on('click', Locations.switchTabsToNextPage);
+		$('#homePage').on('click', Locations.switchTabsToHomePage);
+		$('.container').on('click', '#showOnMap', Locations.showThisLocationOnMap);
+	
+	
 	}
 
 
