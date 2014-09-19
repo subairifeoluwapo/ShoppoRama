@@ -22,12 +22,12 @@ var Locations = {
 	        	});
 	  
 	        	var center =  position.coords.latitude + ',' + position.coords.longitude;
-	        	var map = '<iframe width="90%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDzBjNNTZDL-eYH_Nbth3IMZTcGN3PR7aw&zoom=3&q=Lagos+Nigeria&maptype=satellite"></iframe>';
+	        	var map = '<iframe width="90%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDzBjNNTZDL-eYH_Nbth3IMZTcGN3PR7aw&zoom=3&center=' + center +'&maptype=satellite"></iframe>';
 				$('#Map').append(map);    	
 			});
 		} else {
 	       $('.error').html("Geolocation is not supported by this browser.");
-	    }
+	    	}
 		
 	},
 

@@ -99,10 +99,13 @@ h1 {
 	background-image: url('../img/image5.jpg');
 	background-size: contain;
 	color: white;
+	border-radius: 20%;
+	opacity: .8;
 }
 
 #nearByShops:hover {
 	color: black;
+	opacity: 1;
 }
 
 #homePage {
@@ -114,10 +117,13 @@ h1 {
 	background-image: url('../img/image5.jpg');
 	background-size: contain;
 	color: white;
+	border-radius: 20%;
+	opacity: .8;
 }
 
 #homePage:hover {
 	color: black;
+	opacity: 1;
 }
 
 
@@ -132,10 +138,13 @@ h1 {
 	background-image: url('../img/image5.jpg');
 	background-size: contain;
 	color: white;
+	border-radius: 30%;
+	opacity: .8;
 }
 
 #showOnMap:hover {
 	color: black;
+	opacity: 1;
 }
 
 .line {
