@@ -60,7 +60,7 @@ var Locations = {
 				var tipped = '<div id="tips">' + 'Popular tip: ' + post.tips[0].text + '.. Votes: ' + post.tips[0].likes.summary + '.' + '</div>';
 				$('.container').append(tipped);
 				var addressOfShop = '<div id="address">' + post.venue.location.formattedAddress + '</div>'
-										+ '<iframe class="smaller" width="70%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDzBjNNTZDL-eYH_Nbth3IMZTcGN3PR7aw&zoom=15&q=' + post.venue.location.address +'+'+ post.venue.location.city + '&maptype=roadmap"></iframe>';
+										+ '<iframe class="smaller" width="70%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDzBjNNTZDL-eYH_Nbth3IMZTcGN3PR7aw&zoom=13.5&q=' + post.venue.location.address +'+'+ post.venue.location.city + '&maptype=roadmap"></iframe>';
 				$('.container').append(addressOfShop);
 				$('.smaller').hide();
 				var showOnMapButton = '<input type="button" value="Show on Map" id="showOnMap"/>';
