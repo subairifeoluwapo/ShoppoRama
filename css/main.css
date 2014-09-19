@@ -1,0 +1,195 @@
+html {
+	background-image: url('../img/image7.jpg');
+	background-size: cover;
+}
+
+
+#heading {
+	width: 100%;
+	padding-top: .5em;
+	margin: 0;
+	background-image: url('../img/image3.jpg');
+	margin-bottom: 0;
+}
+
+h1 {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 2em;
+	color: white;
+	margin-left: 4em;
+	visibility: hidden;
+}
+
+#heading p {
+	font-family: 'Lobster Two', cursive;
+	font-size: 1.5em;
+	color: white;
+	margin-left: 6em;
+	visibility: hidden;
+}
+
+.intro {
+	float: right;
+	margin-right: 5em;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-family: 'Lobster Two', cursive; 
+}
+
+.intro2 {
+	float: right;
+	margin-right: 5em;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-family: 'Lobster Two', cursive; 
+}
+
+
+#weatherCast {
+	visibility: hidden;
+	background-image: url('../img/image5.jpg');
+	background-size: contain;
+	text-align: center;
+	height: 9.5em;
+	width: 9em;
+	border: solid;
+	border-radius: 30%;
+	border-color: white;
+	font-family: 'Orbitron', sans-serif;
+	opacity: .7;
+	position: fixed;
+	margin-top: 6em;
+	margin-left: 9em;
+}
+
+#weatherIcon {
+	width: 3em;
+	height:3em;
+	margin: .2em;
+}
+#date {
+	font-size: .8em;
+}
+
+#temp {
+	font-size: .7em;
+}
+
+#time {
+	font-size: .7em;
+}
+
+.wrapper {
+	color: white;
+	padding-top: 4em;}
+
+#nearByShops {
+	font-family: 'Righteous', cursive;
+	/*border: none;*/
+	padding: .5em .2em;
+	margin-left: 37.5em;
+	margin-top: 1em;
+	background-image: url('../img/image5.jpg');
+	background-size: contain;
+	color: white;
+}
+
+#nearByShops:hover {
+	color: black;
+}
+
+#homePage {
+	font-family: 'Righteous', cursive;
+	/*border: none;*/
+	padding: .5em .2em;
+	margin-left: 37.5em;
+	margin-top: 1em;
+	background-image: url('../img/image5.jpg');
+	background-size: contain;
+	color: white;
+}
+
+#homePage:hover {
+	color: black;
+}
+
+
+#Map {
+	margin-left: 7em;
+}
+
+#showOnMap {
+	font-size: .8em;
+	/*border: none;*/
+	padding: .2em .2em;
+	background-image: url('../img/image5.jpg');
+	background-size: contain;
+	color: white;
+}
+
+#showOnMap:hover {
+	color: black;
+}
+
+.line {
+	margin-top: .2em;
+	border-bottom-style: dashed;
+	border-bottom-color: black;
+}
+
+
+.container {
+	text-align: center;
+	width: 70%;
+	margin-left: 15em;
+	margin-right: 20em;
+	margin-top: 2em;
+	overflow: auto;
+	max-height: 60em;
+}
+
+
+#shopName {
+	font-family: 'Righteous', cursive;
+	color: black;
+	text-align: center;
+	font-size: 3em;
+	margin-top: 1em;
+}
+
+#tips {
+	font-family: 'Lobster Two', cursive;
+	font-size: 1em;
+}
+
+#address {
+	font-family: 'Lobster Two', cursive;
+	font-size: 1em;
+	color: black;
+}
+
+footer {
+	font-size: 0.6em;
+	text-align: center;
+	clear: both;
+	padding-top: 10em;
+	padding-bottom: 0;
+}
+
+footer p {
+	font-weight: bolder;
+	font-size: 1.5em;
+}
+
+.social-icon {
+	width: 25px;
+	height: 25px;
+	margin: 0 5px;
+}
+
+.social-icon:hover {
+	background-image: url('../img/image5.jpg');
+	background-size: contain;
+}
