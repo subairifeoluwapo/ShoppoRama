@@ -95,6 +95,7 @@ var Locations = {
 		$('#showOnMap').show();
 		$('.smaller').hide();
 		$('.intro').show();
+		$('.intro2').hide();
 	},
 
 	showThisLocationOnMap: function(event){
