@@ -56,10 +56,17 @@ h1 {
 	border-radius: 30%;
 	border-color: white;
 	font-family: 'Orbitron', sans-serif;
-	opacity: .7;
+	opacity: .8;
 	position: fixed;
 	margin-top: 6em;
 	margin-left: 9em;
+}
+
+
+#weatherCast:hover {
+	background-image: url('../img/image2.jpg');
+	background-size: cover;
+	opacity: 1;
 }
 
 #weatherIcon {
