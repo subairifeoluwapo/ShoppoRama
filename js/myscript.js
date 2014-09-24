@@ -25,26 +25,27 @@ var Locations = {
 	        	var map = '<iframe width="90%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDzBjNNTZDL-eYH_Nbth3IMZTcGN3PR7aw&zoom=3&center=' + center +'&maptype=satellite"></iframe>';
 				$('#Map').append(map);    	
 			});
-		} else {
+		} 
+		else {
 	       $('.error').html("Geolocation is not supported by this browser.");
-	    	}
+	    }
 		
 	},
 
 
 	postWeatherCondition: function(response1) {
 		var weather = response1.data.current_condition[0];
-			var post = this;
-			var weatherIcon= '<img id="weatherIcon" src="' + weather.weatherIconUrl[0].value + '" />';
-			$('#weatherCast').append(weatherIcon);
-			var weatherCondition = '<div id="weatherCondition">' + weather.weatherDesc[0].value + '</div>';
-			$('#weatherCast').append(weatherCondition);
-			var currentDate = '<div id="date">' + response1.data.weather[0].date + '</div>';
-			$('#weatherCast').append(currentDate);
-			var tempDegree = '<div id="temp">' + 'MaxTemp: ' + weather.temp_C + '&deg C' + '</div>';
-			$('#weatherCast').append(tempDegree);
-			var timeObserved = '<div id="time">' + 'Observed: ' + weather.observation_time  + '</div>';
-			$('#weatherCast').append(timeObserved);
+		var post = this;
+		var weatherIcon= '<img id="weatherIcon" src="' + weather.weatherIconUrl[0].value + '" />';
+		$('#weatherCast').append(weatherIcon);
+		var weatherCondition = '<div id="weatherCondition">' + weather.weatherDesc[0].value + '</div>';
+		$('#weatherCast').append(weatherCondition);
+		var currentDate = '<div id="date">' + response1.data.weather[0].date + '</div>';
+		$('#weatherCast').append(currentDate);
+		var tempDegree = '<div id="temp">' + 'MaxTemp: ' + weather.temp_C + '&deg C' + '</div>';
+		$('#weatherCast').append(tempDegree);
+		var timeObserved = '<div id="time">' + 'Observed: ' + weather.observation_time  + '</div>';
+		$('#weatherCast').append(timeObserved);
 	},
 
 	
